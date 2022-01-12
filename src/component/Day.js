@@ -18,8 +18,8 @@ export default function Day() { // 특정 DAY를 선택했을 때 당일차 단�
             <tbody>
             {wordList.map(word => (
                 <tr key={word.id}>
-                    <tb>{word.eng}</tb>
-                    <tb>{word.kor}</tb>
+                    <td>{word.eng}</td>
+                    <td>{word.kor}</td>
                 </tr>
             ))}
             </tbody>
