@@ -1,3 +1,4 @@
+// 각 날짜 마다의 영단어를 따로 표기 하기 위한 페이지를 만드는 컴포넌트
 import dummy from "../db/data.json";
 import { Link } from "react-router-dom"
 
