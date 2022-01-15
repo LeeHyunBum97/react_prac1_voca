@@ -6,28 +6,33 @@
       Read : GET
       Update : PUT
       Delte : DELETE 와 같이 메서드를 사용한다 
-  server역할을 하는데 이에 대한 기록은 경로설정에 적은 json파일에 기록된다.*/
+  server역할을 하는데 이에 대한 기록은 경로설정에 적은 json파일에 기록된다.
+  -> json-server --watch [json파일(데이터 파일) 경로] --port [사용 포트번호]*/ 
 
 import Day from "./component/Day";
 import DayList from "./component/DayList";
 import Header from "./component/Header";
-import { BrowserRouter, Route, Switch } from "react-router-dom"; //npm install react-router-dom@^5.2.0 -> json-server --watch [json파일(데이터 파일) 경로] --port [사용 포트번호] 
+import { BrowserRouter, Route, Switch } from "react-router-dom"; //npm install react-router-dom@^5.2.0  
 import EmptyPage from "./component/EmptyPage";
+import CreateWord from "./component/CreateWord";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header />
+        <Header/>
         <Switch>
           <Route exact path="/">
-            <DayList />
+            <DayList/>
           </Route>
           <Route path="/day/:day">
-            <Day />
+            <Day/>
+          </Route>
+          <Route path="/create_word">
+            <CreateWord/>
           </Route>
           <Route>
-            <EmptyPage />
+            <EmptyPage/>
           </Route>
         </Switch>
       </div>
