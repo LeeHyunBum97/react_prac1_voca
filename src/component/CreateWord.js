@@ -7,16 +7,16 @@ export default function CreateWord() { //단어 입력 폼
     function onSubmit(e) { //event를 인자로 받아서
         e.preventDefault();
 
-        fetch(`http://localhost:3002/words/`, { // 두번째 인자값은 요청의 옵션
+        fetch("http://localhost:3002/words", { // 두번째 인자값은 요청의 옵션
             method: "POST",
             headers: {
-                'Content-Type' : 'applcation/json', // 보내는 리소스의 타입
+                'Content-Type' : 'application/json', // 보내는 리소스의 타입
             },
             body: JSON.stringify({ // POST는 생성할 정보를 보내는데 해당 내용을 body에 실어서 보낸다, 이때 JSON형태로 보내기 위해 Json으로 감싼다.
-                day :dayRef.current.value, // dayRef태그에 current속성으로 해당 태그 컴포넌트에 접근하고 값은 value에 해당 된다.
-                eng :engRef.current.value, // 해당 함수는 POST이기 때문에 value에 현재 ...Ref태그의 값을 담아 전달한다. -> json서버의 words로
-                kor :korRef.current.value,
-                isDone :false,
+                day: dayRef.current.value, // dayRef태그에 current속성으로 해당 태그 컴포넌트에 접근하고 값은 value에 해당 된다.
+                eng: engRef.current.value, // 해당 함수는 POST이기 때문에 value에 현재 ...Ref태그의 값을 담아 전달한다. -> json서버의 words로
+                kor: korRef.current.value,
+                isDone: false,
             }),
         })
         .then(res => { //그리고 응답에 대하여

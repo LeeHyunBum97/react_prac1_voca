@@ -18,7 +18,7 @@ export default function Word({word : w}) { //props로 word 받아오기_Day.js�
         fetch(`http://localhost:3002/words/${word.id}`, { // 두번째 인지값은 요청의 옵션
             method : 'PUT',
             headers : {
-                'Content-Type' : 'applcation/json', // 보내는 리소스의 타입
+                'Content-Type' : 'application/json', // 보내는 리소스의 타입
             },
             body : JSON.stringify({ // PUT은 수정을 위한 정보를 보내는데 해당 내용을 body에 실어서 보낸다, 이때 JSON형태로 보내기 위해 Json으로 감싼다.
                 ...word, //현재 data의 word에

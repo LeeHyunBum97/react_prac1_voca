@@ -7,7 +7,7 @@
 //useEffect는 어떤 상태값이 바뀌었을 때 동작하는 함수를 작성할 수 있게 한다.
 //import { useEffect, useState } from "react"; // useEffect도 react에서 import해오는 HOOK의 종류
 import { Link } from "react-router-dom"
-import useFetch from "../hooks/useFetch";
+import useFetch  from "../hooks/useFetch";
 
  export default function DayList() {
     const days = useFetch('http://localhost:3002/days') //커스텀hook으로 url전달
