@@ -177,6 +177,27 @@
       "kor": "한국사람",
       "isDone": false,
       "id": 28
+    },
+    {
+      "day": "3",
+      "eng": "print",
+      "kor": "인쇄",
+      "isDone": false,
+      "id": 29
+    },
+    {
+      "day": "2",
+      "eng": "pay",
+      "kor": "지불하다",
+      "isDone": false,
+      "id": 30
+    },
+    {
+      "day": "2",
+      "eng": "history",
+      "kor": "역사",
+      "isDone": false,
+      "id": 31
     }
   ]
 }
