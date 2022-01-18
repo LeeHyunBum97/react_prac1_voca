@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // 뜻 보기 버튼 누를 시 뜻이 보이게 하는 컴포넌트
-export default function Word({word : w}) { //props로 word 받아오기_Day.js로 부터, 그리고 해당 js파일에서는 w라는 이름으로 사용
+export default function  Word({word : w}) { //props로 word 받아오기_Day.js로 부터, 그리고 해당 js파일에서는 w라는 이름으로 사용
     
     const [word, setWord] = useState(w);
 

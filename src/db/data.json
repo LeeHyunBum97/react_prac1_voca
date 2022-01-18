@@ -72,6 +72,111 @@
       "kor": "컴퓨터",
       "isDone": false,
       "id": 13
+    },
+    {
+      "day": "3",
+      "eng": "mouse",
+      "kor": "쥐",
+      "isDone": false,
+      "id": 14
+    },
+    {
+      "day": "1",
+      "eng": "Actor",
+      "kor": "배우",
+      "isDone": false,
+      "id": 15
+    },
+    {
+      "day": "1",
+      "eng": "",
+      "kor": "",
+      "isDone": false,
+      "id": 16
+    },
+    {
+      "day": "1",
+      "eng": "effect",
+      "kor": "효과",
+      "isDone": false,
+      "id": 17
+    },
+    {
+      "day": "2",
+      "eng": "toilet",
+      "kor": "화장실",
+      "isDone": false,
+      "id": 18
+    },
+    {
+      "day": "1",
+      "eng": "pen",
+      "kor": "펜",
+      "isDone": false,
+      "id": 19
+    },
+    {
+      "day": "1",
+      "eng": "please",
+      "kor": "정중히 부탁하는",
+      "isDone": false,
+      "id": 20
+    },
+    {
+      "day": "1",
+      "eng": "key",
+      "kor": "열쇠",
+      "isDone": false,
+      "id": 21
+    },
+    {
+      "day": "1",
+      "eng": "save",
+      "kor": "저장하다",
+      "isDone": false,
+      "id": 22
+    },
+    {
+      "day": "3",
+      "eng": "hat",
+      "kor": "모자",
+      "isDone": false,
+      "id": 23
+    },
+    {
+      "day": "3",
+      "eng": "action",
+      "kor": "행동",
+      "isDone": false,
+      "id": 24
+    },
+    {
+      "day": "3",
+      "eng": "host",
+      "kor": "주인",
+      "isDone": false,
+      "id": 25
+    },
+    {
+      "day": "1",
+      "eng": "page",
+      "kor": "장",
+      "isDone": false,
+      "id": 26
+    },
+    {
+      "day": "1",
+      "eng": "milk",
+      "kor": "우유",
+      "isDone": false,
+      "id": 27
+    },
+    {
+      "day": "1",
+      "eng": "korean",
+      "kor": "한국사람",
+      "isDone": false,
+      "id": 28
     }
   ]
 }
