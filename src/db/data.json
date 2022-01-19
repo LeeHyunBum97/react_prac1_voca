@@ -11,6 +11,14 @@
     {
       "id": 3,
       "day": 3
+    },
+    {
+      "day": 4,
+      "id": 4
+    },
+    {
+      "day": 5,
+      "id": 5
     }
   ],
   "words": [
@@ -82,20 +90,6 @@
     },
     {
       "day": "1",
-      "eng": "Actor",
-      "kor": "배우",
-      "isDone": false,
-      "id": 15
-    },
-    {
-      "day": "1",
-      "eng": "",
-      "kor": "",
-      "isDone": false,
-      "id": 16
-    },
-    {
-      "day": "1",
       "eng": "effect",
       "kor": "효과",
       "isDone": false,
@@ -123,20 +117,6 @@
       "id": 20
     },
     {
-      "day": "1",
-      "eng": "key",
-      "kor": "열쇠",
-      "isDone": false,
-      "id": 21
-    },
-    {
-      "day": "1",
-      "eng": "save",
-      "kor": "저장하다",
-      "isDone": false,
-      "id": 22
-    },
-    {
       "day": "3",
       "eng": "hat",
       "kor": "모자",
@@ -159,24 +139,10 @@
     },
     {
       "day": "1",
-      "eng": "page",
-      "kor": "장",
-      "isDone": false,
-      "id": 26
-    },
-    {
-      "day": "1",
       "eng": "milk",
       "kor": "우유",
       "isDone": false,
       "id": 27
-    },
-    {
-      "day": "1",
-      "eng": "korean",
-      "kor": "한국사람",
-      "isDone": false,
-      "id": 28
     },
     {
       "day": "3",
@@ -198,6 +164,20 @@
       "kor": "역사",
       "isDone": false,
       "id": 31
+    },
+    {
+      "day": "4",
+      "eng": "file",
+      "kor": "파일",
+      "isDone": false,
+      "id": 32
+    },
+    {
+      "day": "5",
+      "eng": "book",
+      "kor": "책",
+      "isDone": false,
+      "id": 33
     }
   ]
 }

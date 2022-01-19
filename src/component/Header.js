@@ -9,9 +9,9 @@ export default function Header(){
             <Link to="/create_word"className="link">{/* 단어 입력 폼으로 연결 */}
                 단어추가
             </Link>
-            <a href="#x" className="link">
-                DAY추가
-            </a>
+            <Link to="/create_day"className="link">
+                Day추가
+            </Link>
         </div>
         </div>
 }

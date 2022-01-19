@@ -1,5 +1,11 @@
 // 커스텀 hook만들기
-import { useEffect, useState } from "react";
+
+ /* 의존성 배열 useEffect의 두번째 인자값으로 count를 주어 해당값이 변경될 때만 첫번째 인자값인 함수 실행 
+    두번째 인자값에 만약에 빈배열 []을 인자값으로 준다면 렌더링 직후 딱 한번만 진행하는 함수를 가져올 때 사용된다.
+    그 종류중의 하나가 API를 불러오는 것이다.(서버연결) */
+
+//useEffect는 어떤 상태값이 바뀌었을 때 동작하는 함수를 작성할 수 있게 한다.
+import { useEffect, useState } from "react"; // useEffect도 react에서 import해오는 HOOK의 종류
 
 export default function useFetch(url){ // 주소값을 받아와 fetch를 한다.
     const [data, setData] = useState([]);

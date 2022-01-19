@@ -1,17 +1,22 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import useFetch  from "../hooks/useFetch";
 import { useNavigate } from "react-router";
-import { Link } from "react-router-dom"
 
 export default function CreateWord() { //단어 입력 폼
     const days = useFetch("http://localhost:3002/days"); // 커스텀 hook인 useFetch를 이용해 json서버의 days에 해당되는 값을 저장
     
-    const navigate = useNavigate();
+    const navigate = useNavigate(); // 저장버튼을 눌렀을 때 해당 단어가 저장된 Day페이지로 이동하기 위해서 사용하는 패키지
+
+    const [isLoading, setIsLoading] = useState(false); // 저장버튼을 눌렀을 때 통신이 끝나기 이전에 버튼을 사용하지 못하게 하기 위해 사용
 
     function onSubmit(e) { //event를 인자로 받아서
         e.preventDefault();
+        
+        if(!isLoading){ //isLoading이 not false -> 참일때 -> loading중이아닐때 -> 통신이 끝났을 경우에만 아래 실행.
 
-        fetch("http://localhost:3002/words", { // 두번째 인자값은 요청의 옵션
+         setIsLoading(true); //isLoading을 true로 바꾸면 !isLoding = false이므로, 해당시도의 저장통신이 끝나지 않은경우 아래 실행 불가 상태로 전환됨 
+
+         fetch("http://localhost:3002/words", { // 두번째 인자값은 요청의 옵션
             method: "POST",
             headers: {
                 'Content-Type' : 'application/json', // 보내는 리소스의 타입
@@ -22,15 +27,16 @@ export default function CreateWord() { //단어 입력 폼
                 kor: korRef.current.value,
                 isDone: false,
             }),
-        })
-        .then(res => { //그리고 응답에 대하여
+         })
+         .then(res => { //그리고 응답에 대하여
             if(res.ok){ // 응답이 ok라면
                 alert("생성이 완료 되었습니다!") //Msg 출력
                 navigate(`/day/${dayRef.current.value}`)
+                setIsLoading(false); // 해당시도의 저장통신이 모두 끝난후에 다시 isLoading을 false로전환하여 통신가능하게 함
             } 
         });
+     }
     }
-
     //input창에 적힌 값들을 얻어오기 위해 사용하는 hook -> useRef : dom에 접근하게 한다 -> 어딘가에 포커스 되거나 스크롤 위치를 확인
     const dayRef = useRef(null);
     const engRef = useRef(null);
@@ -56,7 +62,13 @@ export default function CreateWord() { //단어 입력 폼
                     ))}
                 </select>
             </div>
-                <button>저장</button>
+                <button 
+                 style={{ //isLoading상태중에는 버튼을 흐리게한다.
+                    opacity: isLoading ? 0.3: 1,
+                  }}
+                  >
+                    {isLoading ? "Saving..." : "저장"}{/* isLoading상태 일때는 Saving을 띄우고 아닐경우 저장 출력 */}
+                </button>
         </form>
     );
 }

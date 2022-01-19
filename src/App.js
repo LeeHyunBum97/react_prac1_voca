@@ -15,6 +15,7 @@ import Header from "./component/Header";
 import { BrowserRouter, Route, Routes } from "react-router-dom"; //npm install react-router-dom@^5.2.0  
 import EmptyPage from "./component/EmptyPage";
 import CreateWord from "./component/CreateWord";
+import CreateDay from "./component/CreateDay";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/" exact element={<DayList/>}/>
           <Route path="/day/:day" exact element={<Day/>}/>
           <Route path="/create_word" exact element={<CreateWord/>}/>
+          <Route path="/create_day" exact element = {<CreateDay/>}/>
           <Route render={() => {<EmptyPage/>}}/>
         </Routes>
       </div>
